@@ -1,3 +1,4 @@
+// Java program to depict some of the literals
 package com.company;
 
 public class JCWH_04_Literals {
