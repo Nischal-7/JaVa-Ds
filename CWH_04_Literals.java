@@ -1,6 +1,6 @@
 package com.company;
 
-public class Java_Literals_04 {
+public class JCWH_04_Literals {
     public static void main(String[] args) {
         byte age = 34;                            // usually age will not be more than 127
         char ch = 'A';
