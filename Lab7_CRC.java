@@ -42,15 +42,15 @@ class Lab7_CRC{
 		System.out.println();
 		System.out.println("CRC code:");
 		for(int i=0; i<crc.length; i++)
-			System.out.println(crc[i]);
+			System.out.print(crc[i]);
 		System.out.println();
 		
 		//Error Detection
-		System.out.println("Enter CRC code " + tot_length + " bits:");
-		for(int i=0; i<crcc.length; i++)
+		System.out.println("Enter CRC code of " + tot_length + " bits:");
+		for(int i=0; i<crc.length; i++)
 			rem[i] = s.nextInt();
 		rem = xor(generator, rem);
-		for(int i=0; i<rem.lenght; i++){
+		for(int i=0; i<rem.length; i++){
 			if(rem[i] != 0){
 				System.out.println("Error!");
 				break;
@@ -66,12 +66,11 @@ class Lab7_CRC{
 		while(true){
 			for(int i=0; i<generator.length; i++)
 				rem[cur+i] = (rem[cur+i]^generator[i]);
-			while(rem[cur] == 0 && cur != rem.length)
+			while(rem[cur] == 0 && cur != rem.length-1)
 				cur++;
 			if((rem.length-cur)<generator.length)
 				break;
 			}
-		}
 		return	rem;
 	}
 }	
